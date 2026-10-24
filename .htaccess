@@ -1,0 +1,7 @@
+# Keep secrets, SQL, docs and tests away from the web
+<FilesMatch "^(\.env.*|.*\.sql|.*\.md|README\.txt)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+</IfModule>

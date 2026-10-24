@@ -1,0 +1,3 @@
+includes/cacert.pem is the Mozilla CA certificate bundle (via the Python "certifi" project), licensed MPL-2.0.
+It is used only when php.ini has no CA bundle configured (a common XAMPP problem that breaks HTTPS calls to SMS providers and TLS email).
+Update it from https://curl.se/docs/caextract.html
